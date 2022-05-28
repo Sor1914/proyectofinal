@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="748.0" prefWidth="1168.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reservas.controlador.FXMLRecursoController">
+   <children>
+      <AnchorPane layoutX="59.0" layoutY="47.0" prefHeight="686.0" prefWidth="325.0" style="-fx-border-style: solid; -fx-border-color: blue;" AnchorPane.bottomAnchor="86.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label layoutX="42.0" layoutY="30.0" text="Nombre del Recurso" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font name="Lucida Console" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNombre" layoutX="14.0" layoutY="39.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0" />
+            <Label layoutX="11.0" layoutY="74.0" text="Aprobación" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0">
+               <font>
+                  <Font name="Lucida Console" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="143.0" text="Confirmación" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0">
+               <font>
+                  <Font name="Lucida Console" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnCancelar" disable="true" layoutX="18.0" layoutY="640.0" mnemonicParsing="false" onAction="#btnCancelarOnAction" text="Cancelar" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="18.0" />
+            <Button fx:id="btnGuardar" layoutX="18.0" layoutY="604.0" mnemonicParsing="false" onAction="#btnGuardarOnAcion" text="Guardar" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="18.0" />
+            <Label layoutX="15.0" layoutY="207.0" text="Tiempo Máximo de Uso (Horas)" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="Lucida Console" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTiempo" layoutX="14.0" layoutY="235.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <ComboBox fx:id="cboAprobacion" layoutX="11.0" layoutY="101.0" prefWidth="150.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" />
+            <Label layoutX="12.0" layoutY="275.0" text="Costo" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="Lucida Console" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCosto" layoutX="11.0" layoutY="303.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <ComboBox fx:id="cboConfirma" layoutX="12.0" layoutY="169.0" prefWidth="150.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Label layoutX="11.0" layoutY="352.0" text="ID Organización">
+               <font>
+                  <Font name="Lucida Console" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtIdOrg" layoutX="14.0" layoutY="380.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Label layoutX="12.0" layoutY="424.0" text="Estado">
+               <font>
+                  <Font name="Lucida Console" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cboEstado" layoutX="13.0" layoutY="450.0" prefWidth="150.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="339.0" layoutY="17.0" prefHeight="679.0" prefWidth="788.0" AnchorPane.bottomAnchor="86.0" AnchorPane.leftAnchor="339.0" AnchorPane.rightAnchor="111.0" AnchorPane.topAnchor="17.0">
+         <children>
+            <AnchorPane layoutX="7.0" layoutY="-7.0" prefHeight="686.0" prefWidth="781.0" style="-fx-border-style: solid; -fx-border-color: blue;">
+               <children>
+                  <TableView fx:id="tvUsuarios" layoutX="15.0" layoutY="12.0" prefHeight="534.0" prefWidth="758.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

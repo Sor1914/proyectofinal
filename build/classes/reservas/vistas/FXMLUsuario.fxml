@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="766.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reservas.controlador.FXMLUsuarioController">
+   <children>
+      <AnchorPane layoutX="59.0" layoutY="47.0" prefHeight="606.0" prefWidth="326.0" style="-fx-border-style: solid; -fx-border-color: blue;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label layoutX="42.0" layoutY="30.0" text="Nombre de Usuario" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font name="Lucida Console" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUser" layoutX="14.0" layoutY="39.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="40.0" />
+            <Label layoutX="11.0" layoutY="74.0" text="Contraseña" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0">
+               <font>
+                  <Font name="Lucida Console" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="11.0" layoutY="143.0" text="Nombre" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0">
+               <font>
+                  <Font name="Lucida Console" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="477.0" text="Estado del Usuario" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="Lucida Console" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cboEstado" layoutX="16.0" layoutY="507.0" prefWidth="150.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Button fx:id="btnCancelar" disable="true" layoutX="15.0" layoutY="611.0" mnemonicParsing="false" onAction="#btnCancelarOnAction" text="Cancelar" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+            <Button fx:id="btnGuardar" layoutX="15.0" layoutY="575.0" mnemonicParsing="false" onAction="#btnGuardarOnAcion" text="Guardar" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+            <TextField fx:id="txtNombre" layoutX="11.0" layoutY="165.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Label layoutX="15.0" layoutY="207.0" text="Correo Electrónico" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="Lucida Console" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCorreo" layoutX="14.0" layoutY="235.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Label layoutX="14.0" layoutY="416.0" text="Rol del Usuario" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="Lucida Console" size="14.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cboRol" layoutX="14.0" layoutY="440.0" prefWidth="150.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Label layoutX="12.0" layoutY="275.0" text="Teléfono" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="Lucida Console" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtTelefono" layoutX="11.0" layoutY="303.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <Label layoutX="12.0" layoutY="343.0" text="Dirección" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="Lucida Console" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtDireccion" layoutX="11.0" layoutY="371.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+            <PasswordField fx:id="txtPass" layoutX="14.0" layoutY="97.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="339.0" layoutY="17.0" prefHeight="663.0" prefWidth="662.0" AnchorPane.bottomAnchor="86.0" AnchorPane.leftAnchor="339.0" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="17.0">
+         <children>
+            <AnchorPane layoutX="7.0" layoutY="-7.0" prefHeight="686.0" prefWidth="791.0" style="-fx-border-style: solid; -fx-border-color: blue;">
+               <children>
+                  <TableView fx:id="tvUsuarios" layoutX="14.0" layoutY="15.0" prefHeight="376.0" prefWidth="540.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

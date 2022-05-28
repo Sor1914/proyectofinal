@@ -1,0 +1,74 @@
+create database sistema_reserva;
+
+use sistema_reserva;
+
+CREATE TABLE `sistema_reserva`.`organizacion` (
+  `idOrg` INT NOT NULL AUTO_INCREMENT,
+  `nomOrg` VARCHAR(100) NULL,
+  `dirOrg` VARCHAR(100) NULL,
+  `telOrg` INT NULL,
+  `emaOrg` VARCHAR(45) NULL,
+  `idAdmin` VARCHAR(45) NULL,
+  PRIMARY KEY (`idOrg`));
+
+CREATE TABLE `sistema_reserva`.`usuarios` (
+  `idUsr` INT NOT NULL AUTO_INCREMENT,
+  `tipUsr` VARCHAR(1) NULL,
+  `nomUsr` VARCHAR(100) NULL,
+  `pasUsr` VARCHAR(100) NULL,
+  `nopUsr` VARCHAR(100) NULL,
+  `emaUsr` VARCHAR(100) NULL,
+  `telUsr` INT NULL,
+  `dirUsr` VARCHAR(100) NULL,
+  PRIMARY KEY (`idUsr`));
+
+CREATE TABLE `sistema_reserva`.`recursos` (
+  `idRec` INT NOT NULL AUTO_INCREMENT,
+  `nomRec` VARCHAR(100) NULL,
+  `autRec` INT NULL,
+  `conRec` INT NULL,
+  `tieRec` INT NULL,
+  `cosRec` FLOAT NULL,
+  `estRec` INT NULL,
+  PRIMARY KEY (`idRec`));
+
+ALTER TABLE `sistema_reserva`.`organizacion` 
+ADD COLUMN `estOrg` VARCHAR(45) NULL AFTER `idAdmin`;
+
+ALTER TABLE `sistema_reserva`.`usuarios` 
+ADD COLUMN `estUsr` VARCHAR(45) NULL AFTER `dirUsr`;
+
+ALTER TABLE `sistema_reserva`.`recursos` 
+ADD COLUMN `resRec` INT NULL AFTER `estRec`;
+
+CREATE TABLE `sistema_reserva`.`reservas` (
+  `idRes` INT NOT NULL AUTO_INCREMENT,
+  `idusr` INT NULL,
+  `nomAct` VARCHAR(45) NULL,
+  `horIni` VARCHAR(45) NULL,
+  `horFin` VARCHAR(45) NULL,
+  `estRes` INT NULL,
+  PRIMARY KEY (`idRes`));
+
+ALTER TABLE `sistema_reserva`.`organizacion` 
+CHANGE COLUMN `telOrg` `telOrg` VARCHAR(100) NULL DEFAULT NULL ;
+
+ALTER TABLE `sistema_reserva`.`usuarios` 
+CHANGE COLUMN `telUsr` `telUsr` VARCHAR(10) NULL DEFAULT NULL ;
+
+ALTER TABLE `sistema_reserva`.`usuarios` 
+CHANGE COLUMN `tipUsr` `tipUsr` VARCHAR(50) NULL DEFAULT NULL ;
+
+ALTER TABLE `sistema_reserva`.`recursos` 
+CHANGE COLUMN `autRec` `autRec` VARCHAR(100) NULL DEFAULT NULL ,
+CHANGE COLUMN `conRec` `conRec` VARCHAR(100) NULL DEFAULT NULL ,
+CHANGE COLUMN `tieRec` `tieRec` VARCHAR(100) NULL DEFAULT NULL ,
+CHANGE COLUMN `cosRec` `cosRec` VARCHAR(100) NULL DEFAULT NULL ,
+CHANGE COLUMN `estRec` `estRec` VARCHAR(100) NULL DEFAULT NULL ,
+CHANGE COLUMN `resRec` `resRec` VARCHAR(100) NULL DEFAULT NULL ;
+
+ALTER TABLE `sistema_reserva`.`recursos` 
+ADD COLUMN `idOrg` VARCHAR(100) NULL AFTER `resRec`;
+
+ALTER TABLE `sistema_reserva`.`recursos` 
+CHANGE COLUMN `idOrg` `idOrg` INT NULL DEFAULT NULL ;
